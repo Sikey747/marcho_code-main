@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"Blog List" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        @@include('html/_bread_crumbs.htm',{})
+        <div class="blog-list">
+        <div class="blog-list__container">
+
+          <div class="blog-list__main">
+            @@include("html/blog_list/_blog_list_page.htm")
+          </div>
+
+          <aside class="blog-list__asid">
+            @@include("html/_search.htm")
+            @@include("html/_creator.htm")
+            @@include("html/_lastest_post.htm")
+            @@include("html/_category.htm")
+            @@include("html/_popular_tags.htm")
+          </aside>
+       
+      
+               @@include('html/_popup_blog_list.htm')
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

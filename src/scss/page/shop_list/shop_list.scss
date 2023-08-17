@@ -1,0 +1,124 @@
+.shop-list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+    height: 100%;
+
+    &__main{
+        display: grid;
+        gap: rem(40);
+        grid-template-columns: 1fr;
+        &_grid{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    
+}
+
+.up-shop-list {
+    padding: rem(20) rem(30);
+    border: 1px solid var(--bg-accent);
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: rem(15);
+    flex-wrap: wrap;
+
+    &__left {
+        display: flex;
+        gap: rem(10);
+        align-items:center;
+        button{
+            &:hover svg {
+                fill: var(--primary);
+            }
+            svg{
+                transform: translateY(2px);
+                fill: var(--text-secondary);
+                transition: all 0.3s ease-in-out;
+                }
+        } 
+    }
+
+    &__right {
+        display: flex;
+        align-items:center;
+    }
+}
+
+.active-view{
+        fill: var(--primary) !important;
+}
+
+.shop-list-dowm {
+    display: flex;
+    margin: 0 auto;
+    @include adaptiveValue("gap", 50, 20);
+    flex-wrap: wrap;
+
+    &__button {
+        text-transform: uppercase;
+          transition: all 0.3s ease-in-out;
+        &:hover{
+            color: var(--text-primary);
+        }
+    }
+
+    &__links {
+        display: flex;
+        @include adaptiveValue("gap", 30, 25);
+    }
+
+    &__link {
+        a{
+            color: var(--text-secondary);
+        }
+       
+    }
+}
+
+.filter-button{
+    display: none;
+    font-size: rem(20);
+    color:var(--text-primary);
+    margin: rem(0) rem(0) rem(0) rem(10);
+}
+
+ @media (max-width: $tablet) {
+    .filter-button{
+        display: block;
+    }
+ }
+
+ @media (max-width: $mobileSmall) {
+
+    .shop-list {
+    
+        &__main{
+    
+            &_grid{
+                grid-template-columns: 1fr;
+            }
+        }
+        
+    }
+
+    .up-shop-list {
+        padding: rem(10) rem(10);
+        align-items:center;
+        justify-content: center;
+    
+    }
+
+    .shop-list-dowm {
+    
+        &__button {
+         
+            span{
+                display: none;
+            }
+        }
+    
+    }
+
+ }

@@ -1,0 +1,199 @@
+.action {
+    background: var(--bg-secondary);
+    position: relative;
+    &__icon {
+        position: absolute;
+        content: "";
+
+        &_1 {
+            top: 20%;
+            left: 8.072916%;
+        }
+
+        &_2 {
+            bottom: 20%;
+            right: 7.552083%;
+        }
+
+        &_3 {
+            top: 10%;
+            right: 19.27083%;
+        }
+
+        &_4 {
+            top: 40.71%;
+            right: 15.364583%;
+        }
+
+        &_5 {
+            bottom: 9.285%;
+            left: 5.989583%;
+        }
+
+        &_6 {
+            bottom: 25%;
+            left: 37.5%;
+        }
+    }
+
+    &__container {
+        position: relative;
+    }
+}
+
+svg.action__icon.action__icon_1 path {
+    filter: drop-shadow(0px 10px 10px rgba(77, 202, 255, 0.3));
+    fill: var(--secondary);
+}
+
+svg.action__icon.action__icon_2 path {
+    filter: drop-shadow(0px 5px 10px rgba(254, 62, 87, 0.3));
+    fill: var(--primary);
+}
+
+svg.action__icon.action__icon_3 {
+    filter: drop-shadow(0px 15px 20px rgba(255, 197, 95, 0.3));
+    fill: var(--accent);
+}
+
+svg.action__icon.action__icon_4 {
+    fill: var(--text-secondary);
+}
+
+svg.action__icon.action__icon_5 {
+    filter: drop-shadow(0px 5px 10px rgba(254, 62, 87, 0.3));
+    fill: var(--primary);
+}
+
+svg.action__icon.action__icon_6 {
+    filter: drop-shadow(0px 10px 10px rgba(77, 202, 255, 0.3));
+    fill: var(--secondary);
+}
+
+.container-whide {
+    // max-width: rem(1490);
+    @include adaptiveValue("max-width", 1490, 1170, 0, 1920, 1170);
+}
+
+.slide-card {
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    justify-content: center;
+
+    @include adaptiveValue("padding-top", 100, 0);
+    @include adaptiveValue("padding-bottom", 100, 0);
+    @include adaptiveValue("margin-left", 140, 15, 0, 1920, 1170);
+
+    position: relative;
+    z-index: 2;
+
+    &__title {
+        margin: rem(0) rem(0) rem(40) rem(0);
+    }
+
+    &__text {
+        width: 70%;
+    }
+
+    &__button {
+        margin: rem(60) rem(0) rem(0) rem(0);
+        width: fit-content;
+    }
+}
+
+.right {
+    display: flex;
+    flex: 1 1 50%;
+    align-items:end;
+    padding-top: 10%;
+}
+
+/////####################################################
+
+.swiper-pagination {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 7.14%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: var(--primary);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: transparent;
+        border: rem(1) solid var(--primary);
+        border-radius: 50%;
+        height: rem(30);
+        width: rem(30);
+        transition: all 0.3s ease-in-out;
+    }
+}
+.swiper-pagination-bullet {
+    cursor: pointer;
+    width: rem(8);
+    height: rem(8);
+    background: var(--text-secondary);
+    border-radius: 50%;
+    &:not(:last-child) {
+        margin: rem(0) rem(30) rem(0) rem(0);
+    }
+}
+
+
+////////////////////////////////////////////////////////////
+
+
+ @media (max-width: $pc) {
+    .left {
+        padding: rem(100) rem(0);
+        margin: rem(0) rem(0) rem(0) rem(0);
+    }
+    .right {
+        display: flex;
+        flex: 1 1 50%;
+        align-items:end;
+        width: 100%;
+        height: 100%;
+        padding-top: 10%;
+        // clip-path: polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%);
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px 100px 15px 100px;
+        }
+    }
+    
+ }
+
+@media (max-width: $mobile) {
+    .right {
+    display: none;
+}
+  }
+
+@media (max-width: $mobileSmall) {
+    .left {
+        padding: rem(50) rem(0);
+        &__text {
+            width: 100%;
+        }
+    }
+   }
+

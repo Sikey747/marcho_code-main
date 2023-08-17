@@ -1,0 +1,26 @@
+.blog-details-page {
+  &__container {
+    padding-top: rem(120);
+    padding-bottom: rem(120);
+    justify-content: space-between;
+    gap: rem(30);
+    display: flex;
+  }
+
+  &__asid {
+    flex: 0 0 percent(370, 1170);
+  }
+  &__main {
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: $tablet) {
+  .blog-details-page {
+    &__container {
+      flex-direction: column;
+      padding-top: rem(60);
+      padding-bottom: rem(60);
+    }
+  }
+}

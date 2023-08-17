@@ -1,0 +1,39 @@
+.related-prod {
+
+    @include adaptiveValue("padding-top", 60,20 );
+    @include adaptiveValue("padding-bottom",120 ,20 );
+
+    &__container {
+    }
+
+    &__title {
+        text-align: center;
+        margin: rem(0) rem(0) rem(60) rem(0);
+    }
+
+    &__products {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: rem(30);
+    }
+
+}
+
+
+ @media (max-width: $tablet) {
+    .related-prod {
+        &__products {
+            grid-template-columns: repeat(2,1fr);
+           
+        }
+    }
+ }
+
+ @media (max-width: $mobileSmall) {
+    .related-prod {
+        &__products {
+            grid-template-columns: repeat(1,1fr);
+           
+        }
+    }
+ }

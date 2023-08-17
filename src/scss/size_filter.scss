@@ -1,0 +1,24 @@
+.size-filter {
+
+    &__title {
+        margin: rem(0) rem(0) rem(40) rem(0);
+    }
+
+  
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap:rem(20) ;
+    }
+
+    &__button {
+        display: flex;
+        align-items:center;
+        gap:rem(20) ;
+    }
+    
+}
+
+
+
+  

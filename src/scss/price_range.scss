@@ -1,0 +1,37 @@
+.range {
+
+    &__title {
+        display: inline-block;
+        margin: rem(0) rem(0) rem(40) rem(0);
+    }
+
+    .filter-button{
+        display: none;
+
+    }
+
+
+    #range{
+        margin: rem(0) rem(0) rem(40) rem(0);
+    }
+
+    &__down {
+        display: flex;
+        gap: rem(10);
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__price {
+    }
+}
+
+ @media (max-width: $tablet) {
+    .range {
+    .filter-button{
+        display: inline-block;
+
+    }
+    }
+ }

@@ -1,0 +1,14 @@
+.search {
+    &__inner {
+        display: flex;
+    }
+}
+
+.button {
+    svg{
+        fill: var(--bg-primary);
+        width: rem(16);
+        height: rem(16);
+        transform: translateY(2px);
+    }
+}

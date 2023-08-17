@@ -1,0 +1,54 @@
+.creators {
+    padding: rem(40) rem(30);
+    text-align: center;
+    border: 1px solid var(--bg-accent);
+
+    &__image-ibg {
+        width: 160px;
+        height: 160px;
+        margin: 0 auto rem(30);
+    }
+
+    &__title {
+            font-size: rem(16);
+            font-family: "Roboto";
+            font-weight: bold;
+            line-height: 1.444;
+            text-transform: capitalize;
+            margin: rem(0) rem(0) rem(10) rem(0);
+    }
+
+    &__sub-title {
+            font-size: rem(16);
+            font-family: 'Quicksand', sans-serif;
+            color: var(--primary);
+            text-transform: capitalize;
+            margin: rem(0) rem(0) rem(20) rem(0);
+            font-weight: bold;
+    }
+
+    &__text {
+        margin: rem(0) rem(0) rem(30) rem(0);
+    }
+
+    &__links {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        gap: rem(18);
+    }
+
+    &__link {
+        height: rem(15);
+        width: rem(15);
+    
+    }
+
+    &__icon {
+        svg{
+            fill:var(--text-secondary); 
+            height: rem(15);
+            width: rem(15);
+        }
+    }
+}

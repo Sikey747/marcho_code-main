@@ -1,0 +1,29 @@
+.category {
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+    }
+
+    &__link {
+        padding: rem(20);
+        background-color:var(--bg-secondary);
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+          transition: all 0.3s ease-in-out;
+
+          &_active{
+            background: var(--primary);
+            color:var(--text-accent);
+        }
+
+        &:hover{
+            cursor: pointer;
+            background-color:var(--primary);
+            color:var(--text-accent)
+        }
+
+    }
+}

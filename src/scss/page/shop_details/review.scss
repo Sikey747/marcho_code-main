@@ -1,0 +1,93 @@
+.review {
+    padding: rem(30) rem(0) rem(60) rem(0);
+    border-bottom: 1px solid var(--bg-accent);
+
+    &__title {
+        margin: rem(0) rem(0) rem(60) rem(0);
+            font-size: rem(22);
+            line-height: 1;
+            text-transform: none;
+            font-weight: 500;
+            position: relative;
+            display: inline-block;
+            &::after{
+                  position: absolute;
+                            content:'';
+                            bottom: rem(-25);
+                            left: 0;
+                            width: 30%;
+                            height: 3px;
+                            background:var(--primary);
+            }
+   
+          
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: rem(30);
+    }
+
+    &__redio-group {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: rem(20);
+
+        @include adaptiveValue(" column-gap", 60, 10);
+    }
+
+    &__radio-title {
+        color:var(--text-primary);
+            font-size: rem(16);
+            color: var(--text-primary);
+            line-height: 1;
+            font-weight: 600;
+    }
+
+    &__radio-stars {
+        display: flex;
+        align-items:center;
+        
+    }
+
+    &__inputs{
+        display: flex; 
+        gap: rem(35);
+    }
+}
+
+.radio-star{
+    &:not(:last-child){
+        // margin: rem(0) rem(30) rem(0) rem(0);
+        @include adaptiveValue("margin-right", 30, 10);
+    }
+    input[type=radio] +  label span{
+        margin: rem(0);
+        height: rem(17);
+        width: rem(17);
+        border:0;
+        border-radius:0;
+        font-size: rem(20);
+        transform: translateY(-5px);
+          transition: all 0.3s ease-in-out;
+}
+input[type=radio]:checked +  label span{
+    margin: rem(0);
+    height: rem(17);
+    width: rem(17);
+    border:0;
+    border-radius:0;
+    color:#ffc35b;
+}
+
+}
+
+
+ @media (max-width: $mobile) {
+    .review {
+        &__inputs{
+            flex-direction: column; 
+        }
+    }
+ }

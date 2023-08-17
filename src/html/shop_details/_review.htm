@@ -1,0 +1,56 @@
+<section class="review">
+    <div class="review__container">
+        <h3 class="review__title">Add your review</h3>
+        <form class="review__form">
+
+            <div class="review__redio-group">
+                <h5 class="review__radio-title">Your Rating</h5>
+                <div class="review__radio-stars">
+
+                <div class="radio-star">
+                    <input value="1" name="stars" type="radio" id="1">
+                    <label for="1">
+                      <span>★</span>
+                    </label>
+                </div>
+
+                <div class="radio-star">
+                    <input value="2" name="stars" type="radio" id="2">
+                    <label for="2">
+                      <span>★</span><span>★</span>
+                    </label>
+                </div>
+
+                <div class="radio-star">
+                    <input value="3" name="stars" type="radio" id="3">
+                    <label for="3">
+                      <span>★</span><span>★</span><span>★</span>
+                    </label>
+                </div>
+
+                <div class="radio-star">
+                    <input value="4" name="stars" type="radio" id="4">
+                    <label for="4">
+                      <span>★</span><span>★</span><span>★</span><span>★</span>
+                    </label>
+                </div>
+
+                <div class="radio-star">
+                    <input  checked value="5" name="stars" type="radio" id="5">
+                    <label for="5">
+                      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </label>
+                </div>
+
+            </div>
+            </div>
+            <div class="review__inputs">
+            <input type="text" name="form[name]" placeholder="Your name" autocomplete="on" class="input input__inverse">
+            <input type="email" name="form[email]" placeholder="E-mail address" autocomplete="on" class="input input__inverse">
+        </div>
+            <textarea class="textarea textarea__inverse" name="text" placeholder="Your text here"></textarea>
+
+            <button type="submit" class="button button__primary button__primary__accent">Leave Review</button>
+        </form>
+    </div>
+</section>

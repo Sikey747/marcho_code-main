@@ -1,0 +1,58 @@
+@use "sass:math";
+
+@import "base/mixins";
+//@import "fonts/fonts";
+//@import "fonts/icons";
+@import "base/var";
+@import "base/null";
+@import "base/animation";
+@import "base";
+@import "common";
+
+// Підключення стилів окремих блоків
+@import "header";
+@import "footer";
+
+@import "search";
+@import "creators";
+@import "lastest_post";
+@import "category";
+@import "popular_tags";
+@import "price_range";
+@import "color_filter";
+@import "size_filter";
+
+// Підключення стилів окремих сторінок
+@import "page/home";
+@import "page/home/action";
+@import "page/home/benefit";
+@import "page/home/blog";
+@import "page/home/categories";
+@import "page/home/partners";
+@import "page/home/timer";
+@import "page/home/trending";
+@import "page/home/video";
+
+@import "page/404/404";
+
+@import "page/login/login";
+
+@import "page/register/register";
+
+@import "page/contact_us/contact_us";
+
+@import "page/blog_list/blog_list";
+
+@import "page/blog_details/blog_details_page";
+@import "page/blog_details/main_blog";
+@import "page/blog_details/author";
+@import "page/blog_details/comments";
+@import "page/blog_details/replay";
+
+@import "page/shop_list/shop_list_page";
+@import "page/shop_list/shop_list";
+
+@import "page/shop_details/prod_details";
+@import "page/shop_details/prod_tab";
+@import "page/shop_details/review/";
+@import "page/shop_details/related_products";

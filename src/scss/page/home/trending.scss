@@ -1,0 +1,50 @@
+.trending {
+    background: var(--bg-primary);
+    padding: rem(120) rem(0);
+    text-align: center;
+    &__container {
+    }
+
+    &__title {
+        margin: rem(0) rem(0) rem(40) rem(0);
+    }
+
+    &__text {
+        max-width: rem(600);
+        margin: 0 auto;
+        margin-bottom: rem(60);
+    }
+
+    &__car-prod-midls {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: rem(50);
+        column-gap: rem(30);
+        margin: rem(0) rem(0) rem(60) rem(0);
+    }
+
+    &__button {
+    }
+}
+
+
+
+@media (max-width: $mobile) {
+    .trending {
+        padding: rem(60) rem(0);
+
+        &__car-prod-midls {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width: $mobileSmall) {
+    .trending {
+        padding: rem(120) rem(0);
+
+        &__car-prod-midls {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

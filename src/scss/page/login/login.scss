@@ -1,0 +1,63 @@
+
+.login {
+  
+
+    &__container {
+
+    }
+
+    &__inner {
+        padding: rem(120) rem(0) ;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        margin: 0 auto;
+    }
+
+    &__nav{
+        display: flex;
+        gap: rem(60);
+        margin-bottom: rem(60);
+        text-transform: uppercase;
+    }
+    
+    &__link {
+            font-size: rem(22);
+            font-family: 'Roboto', sans-serif;
+            color: #909090;
+            line-height: 1.2;
+          }
+          
+    &__form {
+    }
+
+    .input{
+        margin: rem(0) rem(0) rem(30) rem(0);
+    }
+
+    &__checkbox {
+        margin: rem(20) rem(0);
+    }
+
+    &__button {
+        width: 100%;
+    }
+
+    &__link-lost {
+        display: inline-block;
+        margin: rem(20) rem(0) rem(0) rem(0);
+        color:var(--primary);
+    }
+}
+
+ @media (max-width: $pc) {
+    .bread-crumbs {
+    &__left{
+      display: none;
+    }
+
+    &__right{
+      display: none;
+    }
+ }
+}

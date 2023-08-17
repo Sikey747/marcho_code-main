@@ -1,0 +1,28 @@
+.popular-tags {
+
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: rem(20);
+        column-gap: rem(15);
+        
+    }
+
+    &__link {
+        padding: rem(20) rem(15);
+        border:1px solid var(--text-secondary);
+        color:var(--text-secondary);
+          transition: all 0.3s ease-in-out;
+          
+          &_active{
+            background: var(--primary);
+            color:var(--text-accent);
+            border:0px solid var(--text-secondary);
+          }
+        &:hover{
+            color:var(--text-accent);
+            background-color:var(--primary);
+            cursor: pointer;
+        }
+    }
+}

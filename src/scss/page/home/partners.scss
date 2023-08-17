@@ -1,0 +1,31 @@
+.partners {
+    padding: rem(120) 0;
+    backgnd-color: var(--bg-primary);
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: rem(50);
+        column-gap: rem(30);
+    }
+
+    &__picture {
+        max-width: rem(110);
+        max-height: rem(70);
+    }
+}
+
+@media (max-width: $mobile) {
+    .partners {
+        padding: rem(60) 0;
+
+        &__container {
+            justify-content: center;
+            flex-wrap: wrap;
+            row-gap: rem(50);
+            column-gap: rem(30);
+        }
+    }
+}

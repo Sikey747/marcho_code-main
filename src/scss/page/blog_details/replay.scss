@@ -1,0 +1,30 @@
+.reply {
+    padding: rem(40) rem(0);
+    border-bottom: 1px solid var(--bg-accent);
+
+    h3{
+        font-weight: 600;
+        margin: rem(0) rem(0) rem(30) rem(0);
+
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: rem(40);
+    }
+
+    &__up {
+        display: flex;
+      
+        gap: rem(40);
+    }
+}
+
+ @media (max-width: $mobile) {
+    .reply {
+        &__up {
+          flex-wrap: wrap;
+        }
+    }
+ }

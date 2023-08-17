@@ -1,0 +1,118 @@
+.timer {
+    background-color: var(--bg-secondary);
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        clip-path: polygon(0 0, 68% 0, 100% 100%, 0% 100%);
+        object-fit: cover;
+    }
+}
+
+.inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    @include adaptiveValue("padding-top",160 ,50 );
+    @include adaptiveValue("padding-bottom",160 ,50 );
+    // padding: rem(160) 0;
+    flex-direction: column;
+    align-items: end;
+    justify-content: start;
+
+    &__sub-title {
+        text-transform: uppercase;
+        color: var(--primary);
+        margin-right: 18%;
+        margin-bottom: rem(10);
+    }
+
+    &__title {
+        text-align: center;
+        margin-right: 8%;
+        @include adaptiveValue("font-size",48 ,32);
+    }
+
+    &__button {
+        margin: rem(60) rem(0) rem(0) rem(0);
+        margin-right: 18%;
+    }
+}
+
+.circle-item {
+    display: flex;
+    gap: rem(30);
+    justify-content: start;
+    margin: rem(60) rem(0) rem(0) rem(0);
+    line-height: 1;
+    &__circle {
+        text-align: center;
+        padding: rem(30) rem(35);
+        border-radius: 50%;
+        background-color: var(--bg-primary);
+        box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
+    }
+    &__number {
+    }
+
+    &__text {
+    }
+}
+
+ @media (max-width: $pc) {
+    .timer {
+        img {
+                width: 60%;
+        }
+    }
+
+    .inner {
+
+
+        align-items: center;
+    
+        &__sub-title {
+         
+            margin-right: 0;
+        }
+    
+        &__title {
+            margin-right: 0;
+        }
+    
+        &__button {
+  
+            margin-right: 0;
+        }
+    }
+    
+
+ }
+
+  @media (max-width: $mobile) {
+
+    .circle-item {
+        @include adaptiveValue("gap",30 ,14 );
+        margin: rem(40) rem(0) rem(0) rem(0);
+        &__circle {
+            padding: rem(30) rem(35);
+            @include adaptiveValue("padding-top",30 ,10 ,0,767.98,320);
+            @include adaptiveValue("padding-right",35 ,12 ,0,767.98,320);
+            @include adaptiveValue("padding-bottom",30 ,10 ,0,767.98,320);
+            @include adaptiveValue("padding-left",35 ,12,0,767.98,320);
+    
+        }
+        &__number {
+            @include adaptiveValue("font-size",48 ,26 ,0,767.98,320);
+        }
+    
+        &__text {
+            @include adaptiveValue("font-size",16 ,12 ,0,767.98,320);
+        }
+    }
+
+  }

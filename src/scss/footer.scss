@@ -1,0 +1,224 @@
+.footer {
+    background: var(--bg-secondary);
+
+    &__info {
+        padding: rem(75) rem(0) rem(40) rem(0);
+ 
+        column-gap: rem(50);
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+    }
+}
+
+.contact-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    row-gap: rem(35);
+
+    &__logo {
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        // gap: rem(25);
+        max-width: rem(250);
+    }
+    &__link {
+        a {
+            color: var(--text-secondary);
+            line-height: 2.25;
+        }
+    }
+
+    &__social-links {
+        display: flex;
+        align-items: center;
+        gap: rem(20);
+    }
+
+    &__social-link {
+        height: rem(16);
+        width: rem(16);
+
+        &:hover svg path {
+            fill: var(--primary);
+            transition: all 0.3s ease-in-out;
+        }
+
+        svg path {
+            fill: var(--text-secondary);
+        }
+        svg {
+            height: rem(16);
+            width: rem(16);
+            fill: var(--text-secondary);
+        }
+    }
+}
+
+.useful-footer {
+    &__title {
+        margin: rem(0) rem(0) rem(25) rem(0);
+        font-size: 1.375rem;
+    font-family: "Roboto", sans-serif;
+    color: var(--text-primary);
+    text-transform: capitalize;
+    font-weight: 400;
+    }
+
+    &__links {
+        
+    }
+
+    &__link {
+        font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: var(--text-primary);
+    cursor: pointer;
+        a {
+            color: var(--text-secondary);
+            line-height: 2.25;
+        }
+    }
+}
+
+.accounts {
+    &__title {
+        margin: rem(0) rem(0) rem(25) rem(0);
+        font-size: 1.375rem;
+    font-family: "Roboto", sans-serif;
+    color: var(--text-primary);
+    text-transform: capitalize;
+    font-weight: 400;
+    }
+
+    &__links {
+    }
+
+    &__link {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        color: var(--text-primary);
+        cursor: pointer;
+        a {
+            color: var(--text-secondary);
+            line-height: 2.25;
+        }
+    }
+}
+
+.subscribe {
+    &__title {
+        margin: rem(0) rem(0) rem(25) rem(0);
+    }
+
+    &__text {
+        color: var(--text-secondary);
+    }
+
+    &__form {
+        display: flex;
+        gap: rem(10);
+        margin: rem(30) rem(0) rem(0) rem(0);
+        input {
+            flex: 1 1 68.08%;
+            min-width: rem(200);
+        }
+        .button {
+            flex: 1 1 31.918%;
+        }
+    }
+}
+
+.copiraits {
+    padding: rem(30) rem(0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: rem(12);
+    color: var(--text-secondary);
+    line-height: 2.833;
+    border-top: rem(1) solid #ececec;
+
+    &__title {
+    }
+
+    &__pay-block {
+        display: flex;
+        column-gap: rem(20);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__pays {
+        display: flex;
+        column-gap: rem(20);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__pay {
+        height: rem(20);
+        svg {
+            height: rem(20);
+        }
+    }
+}
+
+//////////////////////////////////////////////////////////////////
+
+@media (max-width: $pc) {
+    .footer {
+        &__info {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: rem(15);
+            row-gap: rem(50);
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .footer__info {
+        justify-content: space-around;
+    }
+    .contact-footer {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+    .copiraits {
+        flex-direction: column;
+        padding: rem(15) rem(0);
+    }
+}
+
+@media (max-width: $mobileSmall) {
+    .useful-footer {
+        width: 100%;
+        text-align: center;
+    }
+
+    .accounts {
+        width: 100%;
+        text-align: center;
+    }
+
+    .subscribe {
+        width: 100%;
+        text-align: center;
+
+        &__form {
+            flex-direction: column;
+            gap: rem(20);
+            .button {
+              width: 100%;
+            }
+        }
+    }
+}
